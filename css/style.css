@@ -123,7 +123,9 @@ button { cursor: pointer; }
 }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 40px; }
 
-.stage-list { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+.stage-list { list-style: none; margin: 56px 0 0; padding: 0; display: grid; gap: 0 48px; }
+@media (min-width: 700px) { .stage-list { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .stage-list { grid-template-columns: repeat(3, 1fr); margin-top: 96px; } }
 .stage-list li {
   display: flex; gap: 24px; align-items: baseline;
   padding: 12px 0; font-size: 20px; font-weight: 300; letter-spacing: -0.03em;
@@ -360,3 +362,7 @@ body.is-step .toast { bottom: 160px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; animation-delay: 0s !important; }
 }
+
+/* фото на главной: компактнее, чем на финале */
+.photo--intro img { aspect-ratio: 4 / 5; max-height: 640px; }
+@media (min-width: 1024px) { .photo--intro { position: static; } }
