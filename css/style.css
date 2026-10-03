@@ -56,12 +56,13 @@ button { cursor: pointer; }
 /* ===== Типографика ===== */
 .display {
   margin: 24px 0 0;
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(40px, 11vw, 72px);
   line-height: 1;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.07em;
 }
-.display em { font-style: italic; font-weight: 300; letter-spacing: -0.07em; }
+.display em { font-style: italic; font-weight: 400; letter-spacing: -0.08em; }
+.inline-ph { display: none; }
 @media (min-width: 1440px) { .display { font-size: 104px; } }
 
 .lead { margin: 20px 0 0; max-width: 520px; font-size: 15px; line-height: 1.5; }
@@ -147,8 +148,8 @@ button { cursor: pointer; }
 }
 .step__title {
   margin: 8px 0 0;
-  font-weight: 300; font-size: clamp(30px, 8.5vw, 48px);
-  line-height: 1.05; letter-spacing: -0.06em;
+  font-weight: 400; font-size: clamp(30px, 8.5vw, 48px);
+  line-height: 1.05; letter-spacing: -0.07em;
 }
 .step__title:focus { outline: none; }
 .step__desc { margin: 16px 0 0; max-width: 360px; color: var(--hint); }
@@ -378,10 +379,8 @@ body.is-step .toast { bottom: 160px; }
   .stage-list li { font-size: 17px; }
   .sign { font-size: 24px; }
   #screenIntro .screen__grid { position: relative; gap: 0; }
-  #screenIntro .screen__main > .pill { margin: 11px 0 0 68px; }
-  #screenIntro .display { margin-top: 28px; }
-  .photo--intro { position: absolute; top: 0; left: var(--gutter); width: 56px; }
-  .photo--intro img { width: 56px; height: 56px; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
+  .photo--intro { display: none; }
+  .inline-ph { display: inline-block; width: .95em; height: .95em; margin: 0 .04em; vertical-align: -.1em; object-fit: cover; object-position: 50% 20%; border-radius: .2em; }
   #screenIntro .actions { flex-direction: column; align-items: stretch; gap: 14px; margin-top: 32px; text-align: center; }
   #screenIntro .actions .btn { width: 100%; }
 }
