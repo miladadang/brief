@@ -123,9 +123,9 @@
       fields: [
         { id: 'name', type: 'text', label: 'Как вас зовут?', required: true, autocomplete: 'name', error: 'Подскажите, как к вам обращаться' },
         { id: 'company', type: 'text', label: 'Название компании / проекта', autocomplete: 'organization' },
-        { id: 'contact', type: 'text', label: 'Telegram, телефон или электронная почта', required: true, kind: 'contact',
+        { id: 'contact', type: 'text', label: 'Контакт для связи: ник в мессенджере, телефон или e-mail', required: true, kind: 'contact',
           hint: 'Как вам удобнее, чтобы я с вами связалась.', placeholder: '@username, +7… или name@mail.ru',
-          error: 'Укажите Telegram (@ник), телефон или e-mail' },
+          error: 'Укажите ник в мессенджере (@ник), телефон или e-mail' },
         { id: 'source', label: 'Где узнали обо мне и почему решили обратиться?' },
         { id: 'extra', label: 'Что-то ещё, о чём я не спросила?', hint: 'Любые пожелания, идеи и сомнения.' },
         { id: 'consent', type: 'consent', required: true, error: 'Без согласия отправить бриф не получится' }
@@ -561,9 +561,9 @@
       : 'Все ваши ответы сохранены. Осталось передать их мне.';
     var notice = $('#finalNotice'), text = $('#finalNoticeText');
     var note = '';
-    if (state === 'manual') note = 'Автоматическая отправка пока не подключена. Скачайте файл с ответами и пришлите его мне в Telegram.';
-    if (state === 'error') note = 'Не удалось отправить ответы: возможно, пропала связь. Ничего не потеряно. Повторите отправку или скачайте файл с ответами и пришлите его мне в Telegram.';
-    if (ok && failedFiles && failedFiles.length) note = 'Ответы дошли, но не все файлы удалось отправить (' + failedFiles.join(', ') + '). Пришлите их мне в Telegram.';
+    if (state === 'manual') note = 'Автоматическая отправка пока не подключена. Скачайте файл с ответами и пришлите его мне.';
+    if (state === 'error') note = 'Не удалось отправить ответы: возможно, пропала связь. Ничего не потеряно. Повторите отправку или скачайте файл с ответами и пришлите его мне.';
+    if (ok && failedFiles && failedFiles.length) note = 'Ответы дошли, но не все файлы удалось отправить (' + failedFiles.join(', ') + '). Пришлите их мне.';
     notice.hidden = !note;
     text.textContent = note;
     $('#retryBtn').hidden = state !== 'error';
