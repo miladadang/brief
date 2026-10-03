@@ -277,7 +277,6 @@
     // ссылки на документы и Telegram
     var tg = 'https://t.me/' + CFG.TELEGRAM_USERNAME;
     $('#tgBtn').href = tg;
-    $('#footerContact').href = tg;
     $$('[data-doc]').forEach(function (a) {
       var url = CFG[a.getAttribute('data-doc')];
       if (url) a.href = url;

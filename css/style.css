@@ -107,7 +107,7 @@ button { cursor: pointer; }
 .brand { display: block; line-height: 0; }
 .brand img { height: 26px; width: auto; display: block; }
 @media (min-width: 1024px) { .brand img { height: 32px; } }
-.header__contact { padding: 9px 18px; font-size: 14px; }
+.header__contact { padding: 11px 22px; font-size: 15px; }
 .header__side .pill, .save-status { display: none; }
 @media (min-width: 700px) { .header__side .pill, .save-status { display: inline-block; } }
 .save-status { font-size: 13px; color: var(--quiet); opacity: 0; transition: opacity .5s var(--ease); }
@@ -129,9 +129,9 @@ button { cursor: pointer; }
 }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 40px; }
 
-.stage-list { list-style: none; margin: 56px 0 0; padding: 0; display: grid; gap: 0 48px; }
-@media (min-width: 700px) { .stage-list { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .stage-list { grid-template-columns: repeat(3, 1fr); margin-top: 96px; } }
+.stage-list { display: none; list-style: none; margin: 56px 0 0; padding: 0; gap: 0 48px; }
+
+@media (min-width: 1024px) { .stage-list { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 96px; } }
 .stage-list li {
   display: flex; gap: 24px; align-items: baseline;
   padding: 12px 0; font-size: 20px; font-weight: 300; letter-spacing: -0.03em;
@@ -378,10 +378,10 @@ body.is-step .toast { bottom: 160px; }
   .stage-list li { font-size: 17px; }
   .sign { font-size: 24px; }
   #screenIntro .screen__grid { position: relative; gap: 0; }
+  #screenIntro .screen__main > .pill { margin: 11px 0 0 68px; }
   #screenIntro .display { margin-top: 28px; }
-  .photo--intro { position: absolute; top: 0; right: 0; width: 64px; }
-  .photo--intro img { width: 64px; height: 64px; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
+  .photo--intro { position: absolute; top: 0; left: var(--gutter); width: 56px; }
+  .photo--intro img { width: 56px; height: 56px; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
   #screenIntro .actions { flex-direction: column; align-items: stretch; gap: 14px; margin-top: 32px; text-align: center; }
   #screenIntro .actions .btn { width: 100%; }
-  .stage-list { margin-top: 40px; }
 }
