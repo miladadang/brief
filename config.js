@@ -8,7 +8,7 @@ window.BRIEF_CONFIG = {
   TELEGRAM_USERNAME: 'milada_dang',
 
   // Ссылки на документы (появятся в согласии и в подвале)
-  POLICY_URL: '',
+  POLICY_URL: 'policy/',
   CONSENT_URL: '',
 
   // Ограничения на файлы

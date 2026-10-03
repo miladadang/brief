@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Политика конфиденциальности — Милада</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preload" href="../fonts/Inter-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .doc { max-width: 760px; padding-top: 40px; padding-bottom: 96px; }
+    .doc h1 { margin: 24px 0 0; font-size: clamp(30px, 8.5vw, 64px); overflow-wrap: anywhere; }
+    .doc h2 { margin: 40px 0 0; font-size: 20px; font-weight: 500; letter-spacing: -0.02em; }
+    .doc p, .doc li { font-size: 16px; line-height: 1.6; }
+    .doc p { margin: 12px 0 0; }
+    .doc ul { margin: 12px 0 0; padding-left: 22px; }
+    .doc li + li { margin-top: 6px; }
+    .doc .upd { color: var(--quiet); font-size: 14px; margin-top: 16px; }
+    .fill { background: var(--cream); border-radius: 6px; padding: 0 6px; }
+    @media (min-width: 1024px) { .doc { padding-top: 64px; } .doc h2 { font-size: 24px; } }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header__row">
+      <a class="brand" href="../" aria-label="milada.dang — на главную">
+        <img src="../img/logo.svg" alt="milada.dang" width="834" height="134">
+      </a>
+      <div class="header__side">
+        <a class="btn btn--primary btn--sm header__contact" href="https://t.me/milada_dang" target="_blank" rel="noopener">Связаться</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container doc">
+    <span class="pill">Документ</span>
+    <h1 class="display">Политика конфиденциальности</h1>
+    <p class="upd">Редакция от 4 октября 2026 года</p>
+
+    <h2>1. Кто обрабатывает данные</h2>
+    <p>Оператор персональных данных — <span class="fill">ФИО, статус (самозанятая / ИП)</span>, далее «Оператор». Связаться с Оператором по вопросам данных можно по электронной почте <span class="fill">email</span> или в Telegram: <a href="https://t.me/milada_dang" target="_blank" rel="noopener">@milada_dang</a>.</p>
+    <p>Эта политика относится к странице брифа, которая находится по адресу этого сайта.</p>
+
+    <h2>2. Какие данные собираются</h2>
+    <p>Только те, которые вы сами вводите в бриф:</p>
+    <ul>
+      <li>имя и контакт для связи (Telegram, телефон или e-mail);</li>
+      <li>ответы на вопросы о вашем бизнесе, задачах и пожеланиях к сайту;</li>
+      <li>ссылки и файлы, которые вы прикрепили.</li>
+    </ul>
+    <p>Сайт не использует cookie, счётчики и системы аналитики и не собирает данные о вашем устройстве.</p>
+
+    <h2>3. Зачем нужны данные</h2>
+    <p>Чтобы изучить ваш запрос, связаться с вами, обсудить условия и подготовить предложение по разработке сайта. Данные не используются для рассылок и рекламы.</p>
+
+    <h2>4. Как данные хранятся и передаются</h2>
+    <ul>
+      <li>Пока вы заполняете бриф, черновик сохраняется только в вашем браузере (localStorage) и никуда не отправляется. Его можно удалить кнопкой «Очистить черновик» внизу страницы или очисткой данных сайта в браузере.</li>
+      <li>После нажатия на кнопку отправки ответы пересылаются Оператору в мессенджер Telegram через сервис Cloudflare Workers, который работает как посредник. Сервис не сохраняет ответы у себя.</li>
+      <li>Третьим лицам данные не продаются и не передаются, кроме случаев, предусмотренных законом.</li>
+    </ul>
+    <p>Мессенджер Telegram и сервис Cloudflare обрабатывают данные по своим собственным правилам, с которыми вы можете ознакомиться на их сайтах.</p>
+
+    <h2>5. Сколько хранятся данные</h2>
+    <p>Данные хранятся до тех пор, пока это необходимо для целей, указанных выше, но не дольше <span class="fill">срок, например 3 года</span> после последнего общения. Если проект не состоялся, данные удаляются по вашему запросу.</p>
+
+    <h2>6. Ваши права</h2>
+    <p>Вы можете в любой момент запросить информацию о том, какие данные о вас хранятся, исправить их, отозвать согласие на обработку или потребовать удаления. Для этого напишите Оператору по контактам из раздела 1. Запрос будет выполнен в разумный срок, не позднее 10 рабочих дней.</p>
+
+    <h2>7. Согласие</h2>
+    <p>Отправляя бриф и отмечая галочку согласия, вы подтверждаете, что ознакомились с этой политикой и даёте согласие на обработку указанных данных на описанных условиях. Согласие можно отозвать способом, указанным в разделе 6.</p>
+
+    <h2>8. Изменения</h2>
+    <p>Оператор может обновлять эту политику. Актуальная версия всегда опубликована на этой странице, дата редакции указана вверху.</p>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="muted">© <span id="year"></span> Милада</span>
+      <nav class="footer__links" aria-label="Навигация"><a href="../">Вернуться к брифу</a></nav>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
