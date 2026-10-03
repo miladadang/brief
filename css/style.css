@@ -385,3 +385,8 @@ body.is-step .toast { bottom: 160px; }
   #screenIntro .actions { flex-direction: column; align-items: stretch; gap: 14px; margin-top: 32px; text-align: center; }
   #screenIntro .actions .btn { width: 100%; }
 }
+
+/* Плашка «важно» на телефоне: отдельной строкой, ровно по левому краю сетки */
+@media (max-width: 699px) {
+  .tag { display: table; margin: 8px 0 0; }
+}
