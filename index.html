@@ -6,22 +6,23 @@
   <title>Бриф на разработку сайта — Милада</title>
   <meta name="description" content="Пошаговый бриф на разработку сайта: несколько коротких этапов, ответы сохраняются автоматически.">
   <meta name="theme-color" content="#ffffff">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/Inter-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="is-intro">
 
-  <!-- Шапка: счётчик этапов слева, логотип по центру, статус сохранения справа -->
+  <!-- Шапка: логотип слева, статус, счётчик этапов и кнопка «Связаться» справа -->
   <header class="header">
     <div class="header__row">
-      <div class="header__side"><span class="pill" id="counter" hidden>01 / 09</span></div>
-      <a class="brand" href="./" aria-label="Милада — на главную">
-        <span>Милада</span>
-        <span>бриф на сайт</span>
+      <a class="brand" href="./" aria-label="milada.dang — на главную">
+        <img src="img/logo.svg" alt="milada.dang" width="834" height="134">
       </a>
-      <div class="header__side header__side--right"><span class="save-status" id="saveStatus" aria-live="polite"></span></div>
+      <div class="header__side">
+        <span class="save-status" id="saveStatus" aria-live="polite"></span>
+        <span class="pill" id="counter" hidden>01 / 09</span>
+        <a class="btn btn--primary btn--sm header__contact" href="https://t.me/milada_dang" target="_blank" rel="noopener">Связаться</a>
+      </div>
     </div>
     <div class="progress" role="progressbar" aria-label="Прогресс заполнения" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress"><i id="progressBar"></i></div>
   </header>
