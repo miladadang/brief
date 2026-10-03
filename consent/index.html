@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Согласие на обработку данных — Милада</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preload" href="../fonts/Inter-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .doc { max-width: 760px; padding-top: 40px; padding-bottom: 96px; }
+    .doc h1 { margin: 24px 0 0; font-size: clamp(28px, 7.5vw, 56px); overflow-wrap: anywhere; }
+    .doc h2 { margin: 40px 0 0; font-size: 20px; font-weight: 500; letter-spacing: -0.02em; }
+    .doc p, .doc li { font-size: 16px; line-height: 1.6; }
+    .doc p { margin: 12px 0 0; }
+    .doc ul { margin: 12px 0 0; padding-left: 22px; }
+    .doc li + li { margin-top: 6px; }
+    .doc .upd { color: var(--quiet); font-size: 14px; margin-top: 16px; }
+    .fill { background: var(--cream); border-radius: 6px; padding: 0 6px; }
+    @media (min-width: 1024px) { .doc { padding-top: 64px; } .doc h2 { font-size: 24px; } }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header__row">
+      <a class="brand" href="../" aria-label="milada.dang — на главную">
+        <img src="../img/logo.svg" alt="milada.dang" width="834" height="134">
+      </a>
+      <div class="header__side">
+        <a class="btn btn--primary btn--sm header__contact" href="https://t.me/milada_dang" target="_blank" rel="noopener">Связаться</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container doc">
+    <span class="pill">Документ</span>
+    <h1 class="display">Согласие на обработку персональных данных</h1>
+    <p class="upd">Редакция от 4 октября 2026 года</p>
+
+    <p>Заполняя бриф на сайте https://miladadang.github.io/brief/ и нажимая кнопку отправки, я свободно, своей волей и в своём интересе даю согласие на обработку моих персональных данных в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных».</p>
+
+    <h2>1. Оператор</h2>
+    <p>Федоточкина Милада Максимовна, самозанятая (плательщик налога на профессиональный доход), ИНН 026511723885, г. Санкт-Петербург, адрес электронной почты: <a href="mailto:miladoshca@mail.ru">miladoshca@mail.ru</a> (далее — Оператор).</p>
+
+    <h2>2. Цель обработки</h2>
+    <p>Рассмотрение заполненного мной брифа, связь со мной, обсуждение условий и подготовка предложения по разработке сайта.</p>
+
+    <h2>3. Какие данные обрабатываются</h2>
+    <ul>
+      <li>имя;</li>
+      <li>контактные данные, которые я указал (профиль в мессенджере, номер телефона или адрес электронной почты);</li>
+      <li>ответы на вопросы брифа;</li>
+      <li>ссылки и файлы, которые я добровольно прикрепил.</li>
+    </ul>
+
+    <h2>4. Действия с данными</h2>
+    <p>Сбор, запись, систематизация, накопление, хранение, уточнение, использование, передача через сервисы обмена сообщениями и облачной инфраструктуры для доставки брифа Оператору, блокирование, удаление и уничтожение данных. Обработка осуществляется с использованием средств автоматизации.</p>
+
+    <h2>5. Передача третьим лицам</h2>
+    <p>Мои данные не передаются третьим лицам, за исключением технической передачи Оператору через сервисы обмена сообщениями и облачной инфраструктуры, которые используются для доставки брифа, и случаев, предусмотренных законодательством РФ. Такие сервисы могут находиться за пределами Российской Федерации.</p>
+
+    <h2>6. Срок хранения</h2>
+    <p>Если сотрудничество не начато, данные хранятся 3 года после окончания переписки, после чего удаляются. При заключении договора данные хранятся в течение срока действия договора и 3 лет после его окончания, если законодательство не требует более длительного срока.</p>
+
+    <h2>7. Срок действия и отзыв согласия</h2>
+    <p>Согласие действует до достижения цели обработки или до его отзыва. Я могу отозвать согласие в любой момент, направив Оператору письмо на <a href="mailto:miladoshca@mail.ru">miladoshca@mail.ru</a> с пометкой «Отзыв согласия на обработку персональных данных» и указав имя и контакт, который я оставил в брифе. После получения отзыва Оператор прекращает обработку и уничтожает данные, если иное не требуется законом.</p>
+
+    <h2>8. Подтверждение</h2>
+    <p>Я подтверждаю, что указал достоверные данные, ознакомлен с <a href="../policy/">Политикой в отношении обработки персональных данных</a> и понимаю свои права как субъекта персональных данных.</p>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="muted">© <span id="year"></span> Милада</span>
+      <nav class="footer__links" aria-label="Навигация"><a href="../">Вернуться к брифу</a></nav>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

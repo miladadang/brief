@@ -9,7 +9,7 @@ window.BRIEF_CONFIG = {
 
   // Ссылки на документы (появятся в согласии и в подвале)
   POLICY_URL: 'policy/',
-  CONSENT_URL: '',
+  CONSENT_URL: 'consent/',
 
   // Ограничения на файлы
   MAX_FILES: 10,
