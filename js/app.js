@@ -227,7 +227,7 @@
 
     if (f.type === 'single' || f.type === 'multi') {
       var kind = f.type === 'single' ? 'radio' : 'checkbox';
-      label = '<p class="field__label" id="' + id + '-label">' + esc(f.label) + tag + req + '</p>';
+      label = '<p class="field__label" id="' + id + '-label">' + tag + esc(f.label) + req + '</p>';
       control = '<div class="chips" role="' + (kind === 'radio' ? 'radiogroup' : 'group') + '" aria-labelledby="' + id + '-label" aria-describedby="' + describedBy + '">' +
         f.options.map(function (o) {
           return '<label class="chip"><input type="' + kind + '" name="' + id + '" value="' + escAttr(o) + '"><span>' + esc(o) + '</span></label>';
@@ -244,7 +244,7 @@
       return '<div class="field" data-field="' + id + '">' + label + hint + control + '</div>';
     }
 
-    label = '<label class="field__label" for="' + id + '">' + esc(f.label) + tag + req + '</label>';
+    label = '<label class="field__label" for="' + id + '">' + tag + esc(f.label) + req + '</label>';
     var ph = f.placeholder ? ' placeholder="' + escAttr(f.placeholder) + '"' : '';
     var ac = f.autocomplete ? ' autocomplete="' + f.autocomplete + '"' : '';
     if (f.type === 'text') {
