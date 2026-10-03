@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Бриф на разработку сайта — Милада</title>
+  <meta name="description" content="Пошаговый бриф на разработку сайта: несколько коротких этапов, ответы сохраняются автоматически.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-intro">
+
+  <!-- Шапка: счётчик этапов слева, логотип по центру, статус сохранения справа -->
+  <header class="header">
+    <div class="header__row">
+      <div class="header__side"><span class="pill" id="counter" hidden>01 / 09</span></div>
+      <a class="brand" href="./" aria-label="Милада — на главную">
+        <span>Милада</span>
+        <span>бриф на сайт</span>
+      </a>
+      <div class="header__side header__side--right"><span class="save-status" id="saveStatus" aria-live="polite"></span></div>
+    </div>
+    <div class="progress" role="progressbar" aria-label="Прогресс заполнения" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress"><i id="progressBar"></i></div>
+  </header>
+
+  <main id="app">
+
+    <!-- Интро -->
+    <section class="screen" id="screenIntro" aria-labelledby="introTitle">
+      <div class="container screen__grid">
+        <div class="screen__main">
+          <span class="pill">Бриф</span>
+          <h1 class="display" id="introTitle">Бриф на <em>разработку</em> сайта</h1>
+          <p class="lead">Этот бриф поможет мне лучше понять ваш бизнес, задачи и ожидания от будущего сайта, чтобы предложить подходящую структуру и визуальную концепцию.</p>
+          <p class="lead">Если пока нет точного ответа на какой-то вопрос, ничего страшного, обсудим это отдельно!</p>
+          <div class="actions">
+            <button type="button" class="btn btn--primary btn--lg" id="startBtn">Начать</button>
+            <span class="muted">Ответы сохраняются автоматически</span>
+          </div>
+        </div>
+        <ol class="stage-list" id="introList" aria-label="Этапы брифа"></ol>
+      </div>
+    </section>
+
+    <!-- Этапы (рендерятся скриптом) -->
+    <form id="form" novalidate autocomplete="off" hidden>
+      <div id="steps"></div>
+    </form>
+
+    <!-- Финал -->
+    <section class="screen screen--final" id="screenFinal" aria-labelledby="finalTitle" hidden>
+      <div class="container screen__grid">
+        <div class="photo">
+          <img src="img/milada.jpg" alt="Милада" width="640" height="640">
+        </div>
+        <div class="screen__main">
+          <h2 class="display" id="finalTitle" tabindex="-1">Спасибо!</h2>
+          <p class="lead" id="finalLead">Ваш бриф уже у меня. Я внимательно изучу ответы и скоро вернусь к вам с обратной связью.</p>
+
+          <div class="notice" id="finalNotice" hidden>
+            <p id="finalNoticeText"></p>
+            <button type="button" class="btn btn--ghost btn--sm" id="retryBtn" hidden>Повторить отправку</button>
+          </div>
+
+          <div class="next">
+            <h3>Что будет дальше</h3>
+            <p>В течение 1–2 рабочих дней я свяжусь с вами, чтобы обсудить детали, ответить на вопросы и определить дальнейшие шаги.</p>
+          </div>
+
+          <div class="actions">
+            <a class="btn btn--primary" id="tgBtn" href="#" target="_blank" rel="noopener">Написать в Telegram</a>
+            <button type="button" class="btn btn--ghost" id="downloadBtn">Скачать копию ответов</button>
+          </div>
+          <p class="sign">— Милада</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Нижняя навигация: точки + «Назад» / «Далее» -->
+  <nav class="nav" id="nav" aria-label="Навигация по этапам" hidden>
+    <div class="nav__inner">
+      <div class="nav__dots" id="dots"></div>
+      <div class="nav__btns">
+        <button type="button" class="btn btn--ghost" id="backBtn">Назад</button>
+        <button type="button" class="btn btn--primary" id="nextBtn">Далее</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ПОДВАЛ: тексты и ссылки на документы заполним позже (адреса — в config.js) -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <span class="muted">© <span id="year"></span> Милада</span>
+      <nav class="footer__links" aria-label="Документы">
+        <a href="#" data-doc="POLICY_URL" target="_blank" rel="noopener">Политика конфиденциальности</a>
+        <a href="#" data-doc="CONSENT_URL" target="_blank" rel="noopener">Согласие на обработку данных</a>
+      </nav>
+      <a class="btn btn--primary btn--sm" id="footerContact" href="#" target="_blank" rel="noopener">Связаться</a>
+    </div>
+    <div class="container footer__reset"><button type="button" class="link-btn" id="resetBtn">Очистить черновик</button></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
